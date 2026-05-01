@@ -1,8 +1,10 @@
 import { GameScene } from './scenes/GameScene.js';
+import { GameOverScene } from './scenes/GameOverScene.js';
+import { TitleScene } from './scenes/TitleScene.js';
 
 const config = {
     type: Phaser.AUTO,
-    title: 'Overlord Rising',
+    title: 'Candy Catch',
     description: '',
     parent: 'game-container',
     width: 1280,
@@ -10,7 +12,9 @@ const config = {
     backgroundColor: '#000000',
     pixelArt: false,
     scene: [
-        GameScene
+        TitleScene,
+        GameScene,
+        GameOverScene
     ],
     scale: {
         mode: Phaser.Scale.FIT,
@@ -22,7 +26,7 @@ const config = {
             gravity: {
                 x: 0, y: 200,
             },
-            debug: true
+            debug: false
         }
     }
 }
